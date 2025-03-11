@@ -1,5 +1,7 @@
 /* Start Varibles */
-
+:root {
+    --main-cokor: #10cab7;
+}
 
 /* End Varibles */
 
@@ -8,8 +10,10 @@
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+  }
+html {
+    scroll-behavior: smooth;
 }
-
 body {
     font-family: "Work Sans", sans-serif;
 }
@@ -18,11 +22,7 @@ body {
     padding-right: 15px;
     margin-left: auto;
     margin-right: auto;
-    width: 600px;
-    margin: auto;
 }
-/* End Global Rules */
-
 /* Small */
 @media (min-width: 768px) {
     .container {
@@ -38,11 +38,11 @@ body {
 /* Large */
 @media (min-width: 1200px) {
     .container {
-        width: 1170px;
+    width: 1170px;
     }
 }
-/* Start Global Rules */
-/* Start Header */
+/* End Global Rules */
+  /* Start Header */
 .header {
     padding: 20px;
 }
@@ -91,6 +91,7 @@ body {
     min-width: 200px;
     top: calc(100% + 15px);
     display: none;
+    z-index: 1;
 }
 .header .links ul::before {
     content: "";
@@ -118,3 +119,30 @@ body {
     border: 1px solid #ddd;
 }
 /* End Header */
+/* Start Landing Section */
+.landing {
+    background-image: url("../iamges/landing.jpg");
+    background-size: cover;
+    height: calc(100vh - 64px);
+    position: relative;
+}
+.landing .intro-text {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50% , -50%);
+    text-align: center;
+    width: 320px;
+    max-width: 100%;
+}
+.landing .intro-text h1 {
+    margin: 0;
+    font-weight: bold;
+    font-size: 50px;
+    color: var(--main-cokor);
+}
+.landing .intro-text p {
+    font-size: 19px;
+    line-height: 1.8;
+}
+/* End Landing Section */
